@@ -3,14 +3,25 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
+import { CounterModule } from './counter/counter.module';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './counter/counter';
+import { listReducer } from './counter/list';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CounterModule,
+    StoreModule.forRoot({ count: counterReducer, names: listReducer }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production // Restrict extension to log-only mode
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

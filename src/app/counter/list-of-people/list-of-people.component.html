@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let name of names$ | async" > {{name}} </li>
+  </ul>
+
+
+  <input type="text" #person  placeholder="Type a name">
+
+  <button (click)="add(person)">ADD</button>
