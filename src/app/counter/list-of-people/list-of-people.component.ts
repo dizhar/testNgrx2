@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store, select } from '@ngrx/store';
-import { ADD } from '../list';
+import { ADD } from './actions';
 import { AppState } from '../app-state';
 
 @Component({

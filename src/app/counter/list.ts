@@ -1,8 +1,7 @@
 import {Action} from '@ngrx/store';
+import { ADD, REMOVE } from './list-of-people/actions';
 
 
-export const ADD = 'ADD';
-export const REMOVE = 'REMOVE';
 
 
 function add(state, action){
