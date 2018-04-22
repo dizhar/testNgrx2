@@ -1,7 +1,9 @@
 import { counterReducer } from './counter/counter';
 import { listReducer } from './counter/list';
+import { routerReducer } from '@ngrx/router-store';
 
-export const reducers =  {
+export const reducersx =  {
     count: counterReducer, 
-    names: listReducer
+    names: listReducer,
+    router: routerReducer
 }
